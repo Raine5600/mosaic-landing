@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Mosaic</title>
+  <meta name="description" content="Mosaic's Terms of Service. Clear, plain-English terms for using Mosaic." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg0: #080A10;
+      --bg1: #0C0E14;
+      --bg2: #13161F;
+      --bg3: #1A1E2B;
+      --border: #252A3A;
+      --borderL: #2E3150;
+      --txtP: #E2E6F3;
+      --txtS: #B0B6CC;
+      --txtM: #7A809A;
+      --idea: #8B5CF6;
+      --task: #14B8A6;
+      --urgent: #FB923C;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg0);
+      color: var(--txtP);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      padding: 16px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      backdrop-filter: blur(20px);
+      background: rgba(8,10,16,0.9);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .nav-logo-icon {
+      width: 32px; height: 32px; border-radius: 8px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .nav-logo-text { font-size: 18px; font-weight: 700; letter-spacing: -0.5px; }
+    .nav-back {
+      font-size: 13px; color: var(--txtM); text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--txtS); }
+
+    /* ── PAGE ── */
+    .page-wrap {
+      max-width: 780px; margin: 0 auto;
+      padding: 72px 32px 120px;
+    }
+
+    /* Hero header */
+    .doc-header {
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.25);
+      padding: 5px 13px; border-radius: 100px; margin-bottom: 20px;
+      font-size: 11px; font-weight: 700; color: var(--idea);
+      letter-spacing: 0.8px; text-transform: uppercase;
+    }
+    .doc-title {
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 900; letter-spacing: -2px; line-height: 1.06;
+      margin-bottom: 16px;
+    }
+    .doc-subtitle {
+      font-size: 17px; color: var(--txtS); line-height: 1.65;
+      max-width: 620px; margin-bottom: 20px;
+    }
+    .doc-meta {
+      font-size: 13px; color: var(--txtM);
+    }
+
+    /* Summary callout */
+    .summary-box {
+      background: rgba(139,92,246,0.06);
+      border: 1px solid rgba(139,92,246,0.2);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+    .summary-box-title {
+      font-size: 13px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--idea); margin-bottom: 14px;
+    }
+    .summary-box ul {
+      list-style: none; display: flex; flex-direction: column; gap: 10px;
+    }
+    .summary-box ul li {
+      font-size: 14px; color: var(--txtS); line-height: 1.5;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .summary-box ul li::before {
+      content: '✓';
+      color: var(--idea); font-weight: 700; flex-shrink: 0; margin-top: 1px;
+    }
+
+    /* Sections */
+    .doc-section {
+      margin-bottom: 52px;
+    }
+    .doc-section-num {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--idea);
+      margin-bottom: 8px;
+    }
+    .doc-section h2 {
+      font-size: 22px; font-weight: 800; letter-spacing: -0.5px;
+      margin-bottom: 16px; line-height: 1.2;
+    }
+    .doc-section p {
+      font-size: 15px; color: var(--txtS); line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .doc-section p:last-child { margin-bottom: 0; }
+    .doc-section ul, .doc-section ol {
+      margin: 14px 0 14px 0;
+      padding-left: 0;
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .doc-section ul li, .doc-section ol li {
+      font-size: 15px; color: var(--txtS); line-height: 1.7;
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .doc-section ul li::before {
+      content: '–';
+      color: var(--txtM); flex-shrink: 0; margin-top: 1px;
+    }
+    .doc-section ol { counter-reset: item; }
+    .doc-section ol li::before {
+      content: counter(item) '.';
+      counter-increment: item;
+      color: var(--idea); font-weight: 700; flex-shrink: 0;
+      min-width: 20px; margin-top: 1px;
+    }
+    .doc-section a { color: var(--idea); text-decoration: none; }
+    .doc-section a:hover { text-decoration: underline; }
+
+    /* Highlight box */
+    .highlight-box {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--idea);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px; margin: 18px 0;
+      font-size: 14px; color: var(--txtS); line-height: 1.7;
+    }
+    .highlight-box.warn {
+      border-left-color: var(--urgent);
+    }
+
+    /* Divider */
+    .doc-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: 0 0 52px;
+    }
+
+    /* Table of contents */
+    .toc {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 14px; padding: 24px 28px;
+      margin-bottom: 56px;
+    }
+    .toc-title {
+      font-size: 12px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--txtM); margin-bottom: 14px;
+    }
+    .toc ol {
+      list-style: none; counter-reset: toc;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .toc ol li { counter-increment: toc; display: flex; gap: 10px; align-items: baseline; }
+    .toc ol li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px; font-weight: 700; color: var(--idea);
+      opacity: 0.6; flex-shrink: 0; min-width: 22px;
+    }
+    .toc ol li a {
+      font-size: 14px; color: var(--txtS); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc ol li a:hover { color: var(--txtP); }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--bg2); border: 1px solid var(--borderL);
+      border-radius: 16px; padding: 28px 32px;
+      display: flex; align-items: center; gap: 20px;
+      margin-top: 20px;
+    }
+    .contact-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .contact-text p { font-size: 14px; color: var(--txtS); margin-top: 4px; line-height: 1.5; }
+    .contact-text strong { font-size: 15px; font-weight: 700; }
+    .contact-text a { color: var(--idea); text-decoration: none; }
+    .contact-text a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px; text-align: center;
+      font-size: 13px; color: var(--txtM);
+    }
+    footer a { color: var(--txtM); text-decoration: none; }
+    footer a:hover { color: var(--txtS); }
+    .footer-logo {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; margin-bottom: 12px;
+    }
+    .footer-logo-icon {
+      width: 24px; height: 24px; border-radius: 6px; overflow: hidden;
+    }
+    .footer-logo-icon img { width: 100%; height: 100%; object-fit: cover; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-icon"><img src="M2.webp" alt="Mosaic" /></div>
+    <span class="nav-logo-text">Mosaic</span>
+  </a>
+  <a class="nav-back" href="index.html">← Back to home</a>
+</nav>
+
+<!-- CONTENT -->
+<div class="page-wrap">
+
+  <!-- Header -->
+  <div class="doc-header">
+    <div class="doc-badge">Terms of Service</div>
+    <h1 class="doc-title">Simple terms,<br>plain English.</h1>
+    <p class="doc-subtitle">We've tried to write our terms in a way that's actually readable. If anything is unclear, please reach out — we'd rather explain than confuse.</p>
+    <p class="doc-meta">Last updated: March 16, 2026 · Effective: March 16, 2026</p>
+  </div>
+
+  <!-- TL;DR -->
+  <div class="summary-box">
+    <div class="summary-box-title">The short version</div>
+    <ul>
+      <li>Mosaic is free to download and use. You own everything you record — we make no claim on your content.</li>
+      <li>Use Mosaic lawfully and don't try to break, reverse-engineer, or abuse the app or service.</li>
+      <li>Mosaic is provided as-is, especially during early access. We're not liable for data loss — please back up your device.</li>
+      <li>We can update these terms. We'll let you know if we make material changes.</li>
+      <li>These terms are governed by the laws of the United States.</li>
+    </ul>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#description">Description of Service</a></li>
+      <li><a href="#eligibility">Eligibility</a></li>
+      <li><a href="#your-content">Your Content</a></li>
+      <li><a href="#acceptable-use">Acceptable Use</a></li>
+      <li><a href="#intellectual-property">Intellectual Property</a></li>
+      <li><a href="#disclaimers">Disclaimers & Early Access</a></li>
+      <li><a href="#limitation">Limitation of Liability</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#app-store">App Store Terms</a></li>
+      <li><a href="#changes">Changes to These Terms</a></li>
+      <li><a href="#governing-law">Governing Law</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. Acceptance -->
+  <div class="doc-section" id="acceptance">
+    <div class="doc-section-num">Section 01</div>
+    <h2>Acceptance of Terms</h2>
+    <p>By downloading, installing, or using the Mosaic app or website, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use Mosaic.</p>
+    <p>These Terms apply to your use of the Mosaic iOS application, our waitlist website, and any related services or communications (collectively, the "Service"). By using the Service, you also confirm that you have read and understood our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>If you are using Mosaic on behalf of an organization, you represent that you have authority to bind that organization to these Terms.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 2. Description -->
+  <div class="doc-section" id="description">
+    <div class="doc-section-num">Section 02</div>
+    <h2>Description of Service</h2>
+    <p>Mosaic is a voice note application for iOS that allows users to record audio, have it transcribed on-device, and automatically categorize the resulting notes using on-device machine learning. Notes are stored locally on the user's device and can optionally be synced across the user's own Apple devices via iCloud.</p>
+    <p>Mosaic is currently in an early access / pre-launch phase. Features, pricing, and availability are subject to change. We make no guarantee that the Service will be available at any particular time, in any particular location, or with any particular features.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 3. Eligibility -->
+  <div class="doc-section" id="eligibility">
+    <div class="doc-section-num">Section 03</div>
+    <h2>Eligibility</h2>
+    <p>You must be at least 13 years of age to use Mosaic. If you are between 13 and 18 years of age, you represent that you have your parent or guardian's permission to use the Service and that they have read and agreed to these Terms on your behalf.</p>
+    <p>Mosaic is currently available only in regions supported by the Apple App Store. You are responsible for compliance with local laws and regulations in your jurisdiction.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 4. Your Content -->
+  <div class="doc-section" id="your-content">
+    <div class="doc-section-num">Section 04</div>
+    <h2>Your Content</h2>
+    <p>You retain full ownership of all voice recordings, transcriptions, notes, and other content you create using Mosaic ("Your Content"). We make no claim to ownership of Your Content.</p>
+    <p>Because Mosaic processes all content on-device and does not transmit Your Content to our servers, we do not have the ability to access, review, modify, or delete Your Content. You are solely responsible for maintaining copies and backups of Your Content.</p>
+    <div class="highlight-box">
+      We strongly recommend enabling iCloud Backup or maintaining your own backups of your device. Mosaic is not liable for any loss of content resulting from device failure, app deletion, or any other cause.
+    </div>
+    <p>By using Mosaic, you represent that Your Content does not violate any third-party rights, including copyright, trademark, privacy, or publicity rights, and does not violate any applicable laws.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 5. Acceptable Use -->
+  <div class="doc-section" id="acceptable-use">
+    <div class="doc-section-num">Section 05</div>
+    <h2>Acceptable Use</h2>
+    <p>You agree to use Mosaic only for lawful purposes and in a manner consistent with these Terms. You agree not to:</p>
+    <ul>
+      <li>Use Mosaic to record any person without their knowledge or consent where such recording is prohibited by applicable law.</li>
+      <li>Attempt to reverse-engineer, decompile, disassemble, or otherwise derive the source code of Mosaic.</li>
+      <li>Attempt to circumvent, disable, or interfere with any security features of Mosaic or the devices it runs on.</li>
+      <li>Use Mosaic in any manner that could damage, overburden, or impair the Service or its infrastructure.</li>
+      <li>Use Mosaic to create, store, or transmit any content that is unlawful, harmful, harassing, defamatory, or that infringes third-party rights.</li>
+      <li>Use Mosaic in violation of Apple's App Store Review Guidelines or Apple's Terms of Service.</li>
+      <li>Attempt to access any portion of the Service that is not intended to be publicly accessible.</li>
+    </ul>
+    <p>We reserve the right to investigate violations of these Terms and to take appropriate action, including removing access to the Service where technically possible.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 6. IP -->
+  <div class="doc-section" id="intellectual-property">
+    <div class="doc-section-num">Section 06</div>
+    <h2>Intellectual Property</h2>
+    <p>The Mosaic app, including its design, interface, graphics, logos, icons, and underlying code, is owned by the Mosaic development team and is protected by copyright, trademark, and other intellectual property laws.</p>
+    <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the Mosaic app on your Apple device(s) for your personal, non-commercial purposes, subject to these Terms.</p>
+    <p>This license does not include the right to:</p>
+    <ul>
+      <li>Sublicense, sell, resell, transfer, assign, or commercially exploit Mosaic.</li>
+      <li>Modify or create derivative works based on Mosaic.</li>
+      <li>Reproduce, distribute, publicly display, or publicly perform Mosaic's code, design, or content.</li>
+      <li>Use any Mosaic trademark, logo, or brand identifier without prior written consent.</li>
+    </ul>
+    <p>The "Mosaic" name, logo, and visual identity are trademarks of the Mosaic development team. All rights reserved.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 7. Disclaimers -->
+  <div class="doc-section" id="disclaimers">
+    <div class="doc-section-num">Section 07</div>
+    <h2>Disclaimers &amp; Early Access</h2>
+    <p>Mosaic is currently in an early access phase. This means the Service is provided for evaluation and feedback purposes and may contain bugs, errors, or incomplete features.</p>
+    <div class="highlight-box warn">
+      THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+    </div>
+    <p>We do not warrant that:</p>
+    <ul>
+      <li>Mosaic will be uninterrupted, error-free, or available at any particular time.</li>
+      <li>Transcriptions produced by Mosaic will be accurate, complete, or suitable for any particular purpose.</li>
+      <li>AI categorization will be correct or consistent.</li>
+      <li>Any data stored in the app will be preserved indefinitely or in the event of a device failure, software update, or app deletion.</li>
+    </ul>
+    <p>Mosaic is a tool to assist with personal note-taking. Do not use it as the sole record of any legally, medically, or financially significant information.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 8. Limitation -->
+  <div class="doc-section" id="limitation">
+    <div class="doc-section-num">Section 08</div>
+    <h2>Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, Mosaic and its developers shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Service, including but not limited to:</p>
+    <ul>
+      <li>Loss of data, recordings, transcriptions, or notes.</li>
+      <li>Loss of revenue, profits, or business opportunities.</li>
+      <li>Any inaccuracies in transcription or AI categorization.</li>
+      <li>Device damage or software issues arising from use of the app.</li>
+    </ul>
+    <p>In jurisdictions that do not allow the exclusion or limitation of certain damages, our liability shall be limited to the maximum extent permitted by law.</p>
+    <p>Because Mosaic is currently offered free of charge during early access, if we are found liable to you for any reason, our total aggregate liability shall not exceed USD $50.00.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 9. Termination -->
+  <div class="doc-section" id="termination">
+    <div class="doc-section-num">Section 09</div>
+    <h2>Termination</h2>
+    <p>You may stop using Mosaic at any time by deleting the app from your device. Deletion of the app will remove all locally stored data, including your recordings and transcriptions, unless you have iCloud sync enabled.</p>
+    <p>We reserve the right to discontinue the Service at any time, with or without notice. In the event we discontinue the Service, we will make reasonable efforts to provide advance notice to waitlist subscribers.</p>
+    <p>Sections of these Terms that by their nature should survive termination (including intellectual property, disclaimers, limitation of liability, and governing law) will survive termination.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 10. App Store -->
+  <div class="doc-section" id="app-store">
+    <div class="doc-section-num">Section 10</div>
+    <h2>App Store Terms</h2>
+    <p>Mosaic is distributed through Apple's App Store. Your download and use of Mosaic is also subject to Apple's App Store Terms of Service. In the event of any conflict between these Terms and Apple's terms, Apple's terms will govern with respect to App Store-specific matters.</p>
+    <p>Apple is not a party to these Terms and has no obligation to provide maintenance or support for Mosaic. Apple is not responsible for any claims you or a third party may have relating to Mosaic, including product liability claims, consumer protection claims, or intellectual property infringement claims.</p>
+    <p>Apple and Apple's subsidiaries are third-party beneficiaries of these Terms and, upon your acceptance of these Terms, Apple will have the right to enforce these Terms against you as a third-party beneficiary.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 11. Changes -->
+  <div class="doc-section" id="changes">
+    <div class="doc-section-num">Section 11</div>
+    <h2>Changes to These Terms</h2>
+    <p>We may revise these Terms at any time. When we make material changes, we will update the "Last updated" date at the top of this page. For significant changes, we will also notify waitlist subscribers via email.</p>
+    <p>Your continued use of the Service after any changes to these Terms constitutes your acceptance of the revised Terms. If you do not agree to the updated Terms, you should stop using the Service.</p>
+    <p>We encourage you to review these Terms periodically. Previous versions are available upon request.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 12. Governing Law -->
+  <div class="doc-section" id="governing-law">
+    <div class="doc-section-num">Section 12</div>
+    <h2>Governing Law &amp; Disputes</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of the United States, without regard to conflict of law principles. You agree to submit to the personal and exclusive jurisdiction of the courts located within the United States for resolution of any disputes arising under these Terms.</p>
+    <p>If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that these Terms will otherwise remain in full force and effect.</p>
+    <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 13. Contact -->
+  <div class="doc-section" id="contact">
+    <div class="doc-section-num">Section 13</div>
+    <h2>Contact Us</h2>
+    <p>If you have any questions about these Terms of Service, or if you wish to report a violation, please contact us. We aim to respond to all inquiries within 5 business days.</p>
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-text">
+        <strong>Mosaic Legal Team</strong>
+        <p>Email: <a href="mailto:legal@mosaic-app.com">legal@mosaic-app.com</a><br />
+        For privacy-specific requests, please email <a href="mailto:privacy@mosaic-app.com">privacy@mosaic-app.com</a>.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.page-wrap -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-logo-icon"><img src="M2.webp" alt="Mosaic" /></div>
+    <strong style="color:var(--txtS);">Mosaic</strong>
+  </div>
+  <p>© 2026 Mosaic. All rights reserved. &nbsp;·&nbsp;
+    <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
+    <a href="index.html">Home</a>
+  </p>
+</footer>
+
+</body>
+</html>
