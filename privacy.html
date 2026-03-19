@@ -3,3 +3,380 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Mosaic</title>
+  <meta name="description" content="Mosaic's Privacy Policy. We believe your thoughts are yours alone." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg0: #080A10;
+      --bg1: #0C0E14;
+      --bg2: #13161F;
+      --bg3: #1A1E2B;
+      --border: #252A3A;
+      --borderL: #2E3150;
+      --txtP: #E2E6F3;
+      --txtS: #B0B6CC;
+      --txtM: #7A809A;
+      --idea: #8B5CF6;
+      --task: #14B8A6;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg0);
+      color: var(--txtP);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      padding: 16px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      backdrop-filter: blur(20px);
+      background: rgba(8,10,16,0.9);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .nav-logo-icon {
+      width: 32px; height: 32px; border-radius: 8px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .nav-logo-text { font-size: 18px; font-weight: 700; letter-spacing: -0.5px; }
+    .nav-back {
+      font-size: 13px; color: var(--txtM); text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--txtS); }
+
+    /* ── PAGE ── */
+    .page-wrap {
+      max-width: 780px; margin: 0 auto;
+      padding: 72px 32px 120px;
+    }
+
+    /* Hero header */
+    .doc-header {
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(20,184,166,0.1); border: 1px solid rgba(20,184,166,0.25);
+      padding: 5px 13px; border-radius: 100px; margin-bottom: 20px;
+      font-size: 11px; font-weight: 700; color: var(--task);
+      letter-spacing: 0.8px; text-transform: uppercase;
+    }
+    .doc-title {
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 900; letter-spacing: -2px; line-height: 1.06;
+      margin-bottom: 16px;
+    }
+    .doc-subtitle {
+      font-size: 17px; color: var(--txtS); line-height: 1.65;
+      max-width: 620px; margin-bottom: 20px;
+    }
+    .doc-meta {
+      font-size: 13px; color: var(--txtM);
+    }
+
+    /* Summary callout */
+    .summary-box {
+      background: rgba(20,184,166,0.06);
+      border: 1px solid rgba(20,184,166,0.2);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+    .summary-box-title {
+      font-size: 13px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--task); margin-bottom: 14px;
+    }
+    .summary-box ul {
+      list-style: none; display: flex; flex-direction: column; gap: 10px;
+    }
+    .summary-box ul li {
+      font-size: 14px; color: var(--txtS); line-height: 1.5;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .summary-box ul li::before {
+      content: '✓';
+      color: var(--task); font-weight: 700; flex-shrink: 0; margin-top: 1px;
+    }
+
+    /* Sections */
+    .doc-section {
+      margin-bottom: 52px;
+    }
+    .doc-section-num {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--idea);
+      margin-bottom: 8px;
+    }
+    .doc-section h2 {
+      font-size: 22px; font-weight: 800; letter-spacing: -0.5px;
+      margin-bottom: 16px; line-height: 1.2;
+    }
+    .doc-section p {
+      font-size: 15px; color: var(--txtS); line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .doc-section p:last-child { margin-bottom: 0; }
+    .doc-section ul, .doc-section ol {
+      margin: 14px 0 14px 0;
+      padding-left: 0;
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .doc-section ul li, .doc-section ol li {
+      font-size: 15px; color: var(--txtS); line-height: 1.7;
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .doc-section ul li::before {
+      content: '–';
+      color: var(--txtM); flex-shrink: 0; margin-top: 1px;
+    }
+    .doc-section ol { counter-reset: item; }
+    .doc-section ol li::before {
+      content: counter(item) '.';
+      counter-increment: item;
+      color: var(--idea); font-weight: 700; flex-shrink: 0;
+      min-width: 20px; margin-top: 1px;
+    }
+    .doc-section a { color: var(--idea); text-decoration: none; }
+    .doc-section a:hover { text-decoration: underline; }
+
+    /* Highlight box */
+    .highlight-box {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-left: 3px solid var(--idea);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px; margin: 18px 0;
+      font-size: 14px; color: var(--txtS); line-height: 1.7;
+    }
+
+    /* Divider */
+    .doc-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: 0 0 52px;
+    }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--bg2); border: 1px solid var(--borderL);
+      border-radius: 16px; padding: 28px 32px;
+      display: flex; align-items: center; gap: 20px;
+      margin-top: 20px;
+    }
+    .contact-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .contact-text p { font-size: 14px; color: var(--txtS); margin-top: 4px; line-height: 1.5; }
+    .contact-text strong { font-size: 15px; font-weight: 700; }
+    .contact-text a { color: var(--idea); text-decoration: none; }
+    .contact-text a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px; text-align: center;
+      font-size: 13px; color: var(--txtM);
+    }
+    footer a { color: var(--txtM); text-decoration: none; }
+    footer a:hover { color: var(--txtS); }
+    .footer-logo {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; margin-bottom: 12px;
+    }
+    .footer-logo-icon {
+      width: 24px; height: 24px; border-radius: 6px; overflow: hidden;
+    }
+    .footer-logo-icon img { width: 100%; height: 100%; object-fit: cover; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-icon"><img src="M2.webp" alt="Mosaic" /></div>
+    <span class="nav-logo-text">Mosaic</span>
+  </a>
+  <a class="nav-back" href="index.html">← Back to home</a>
+</nav>
+
+<!-- CONTENT -->
+<div class="page-wrap">
+
+  <!-- Header -->
+  <div class="doc-header">
+    <div class="doc-badge">Privacy Policy</div>
+    <h1 class="doc-title">Your thoughts<br>belong to you.</h1>
+    <p class="doc-subtitle">We built Mosaic on a simple belief: a note-taking app should never need to read your notes. Here's exactly how we protect your privacy.</p>
+    <p class="doc-meta">Last updated: March 16, 2026 · Effective: March 16, 2026</p>
+  </div>
+
+  <!-- TL;DR summary -->
+  <div class="summary-box">
+    <div class="summary-box-title">The short version</div>
+    <ul>
+      <li>All audio transcription and AI categorization happens entirely on your device. Your recordings never leave your phone.</li>
+      <li>We do not collect, store, or sell your voice recordings, transcriptions, or personal notes — ever.</li>
+      <li>The only personal data we may hold is your email address if you joined our waitlist.</li>
+      <li>iCloud sync is optional, entirely your choice, and governed by Apple's privacy policy.</li>
+      <li>No third-party analytics, no advertising SDKs, no trackers of any kind in the app.</li>
+      <li>You can request deletion of your waitlist email at any time by contacting us.</li>
+    </ul>
+  </div>
+
+  <!-- 1. Who we are -->
+  <div class="doc-section">
+    <div class="doc-section-num">Section 01</div>
+    <h2>Who We Are</h2>
+    <p>Mosaic is a voice note application developed for iOS. When this policy refers to "Mosaic," "we," "us," or "our," it means the Mosaic development team. When it refers to "you" or "your," it means you as a user of the Mosaic app or visitor to our website.</p>
+    <p>This Privacy Policy describes how we handle information in connection with the Mosaic app and the Mosaic waitlist at our website (mosaic-app.com). If you have questions, please contact us using the details at the end of this document.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 2. Information we collect -->
+  <div class="doc-section">
+    <div class="doc-section-num">Section 02</div>
+    <h2>Information We Collect</h2>
+    <p>We collect as little information as possible. Here is the complete list:</p>
+    <ul>
+      <li><strong>Waitlist email address.</strong> If you submit your email through our website to join the Mosaic waitlist, we store that email address so we can notify you at launch. This is the only personally identifiable information we hold about you.</li>
+      <li><strong>No in-app personal data.</strong> The Mosaic app itself does not collect, transmit, or store any personal data on our servers. All app data — your recordings, transcriptions, categories, and notes — lives exclusively on your device.</li>
+    </ul>
+    <div class="highlight-box">
+      We do not use any analytics tools, crash-reporting SDKs, advertising networks, or behavioral tracking systems inside the Mosaic app. If you download the app, we receive no signal that you did so, nor any data about how you use it.
+    </div>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 3. How your data is processed -->
+  <div class="doc-section">
+    <div class="doc-section-num">Section 03</div>
+    <h2>How Your Data Is Processed</h2>
+    <p>Every core feature of Mosaic — audio recording, transcription, and AI categorization — runs entirely on your iPhone using Apple's on-device frameworks (including Apple's Speech Recognition framework and on-device machine learning models). At no point does your audio or text leave your device to reach our servers.</p>
+    <p>Specifically:</p>
+    <ul>
+      <li><strong>Audio recordings</strong> are captured locally by your device's microphone and processed in memory. The audio file is stored in your app's sandboxed local storage.</li>
+      <li><strong>Transcriptions</strong> are generated on-device and stored in your app's local SwiftData database. They are never transmitted to any external server.</li>
+      <li><strong>AI categorization</strong> is performed on-device using a local machine learning model. Your note content is never sent to a cloud AI service for classification.</li>
+      <li><strong>iCloud Sync</strong> (if enabled by you) uses Apple's CloudKit infrastructure to sync your notes between your own Apple devices. This data is governed by Apple's Privacy Policy. We never have access to it.</li>
+    </ul>
+    <p>When you delete a note in Mosaic, it is immediately removed from your local database. If you have iCloud sync enabled, the deletion propagates to your other devices via Apple's infrastructure. We do not retain deleted data.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 4. Waitlist emails -->
+  <div class="doc-section">
+    <div class="doc-section-num">Section 04</div>
+    <h2>Waitlist Email Addresses</h2>
+    <p>If you submit your email on our website, we use that address only to:</p>
+    <ul>
+      <li>Notify you when Mosaic is available on the App Store.</li>
+      <li>Send you occasional product updates prior to launch (no more than once per month).</li>
+      <li>Offer early access, beta invitations, or launch discounts.</li>
+    </ul>
+    <p>We will never sell, rent, share, or transfer your email address to any third party. We will never use it to send you advertising for other products or services. We use a reputable email service provider to send these communications; your email address is shared with that provider solely for this purpose and subject to their data processing agreement.</p>
+    <p>You can unsubscribe from waitlist emails at any time by clicking the unsubscribe link in any email we send, or by contacting us directly at the address below. Upon unsubscription, your email will be deleted from our records within 30 days.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 5. Third parties -->
+  <div class="doc-section">
+    <div class="doc-section-num">Section 05</div>
+    <h2>Third-Party Services</h2>
+    <p>The Mosaic app contains no third-party SDKs, advertising networks, or crash-reporting tools.</p>
+    <p>Our website may use third-party hosting infrastructure (such as a CDN or static host). These services may log standard server access data (IP address, browser type, timestamp) as part of normal HTTP infrastructure operation. This data is not linked to you personally and is not used for profiling or advertising. It is subject to the hosting provider's own privacy policy.</p>
+    <p>Apple's App Store and Apple's iOS framework are not considered third parties under this policy. Your use of any Apple service is governed by Apple's Privacy Policy.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 6. Children -->
+  <div class="doc-section">
+    <div class="doc-section-num">Section 06</div>
+    <h2>Children's Privacy</h2>
+    <p>Mosaic is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with their email address, please contact us immediately and we will delete it promptly.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 7. Your rights -->
+  <div class="doc-section">
+    <div class="doc-section-num">Section 07</div>
+    <h2>Your Rights</h2>
+    <p>Depending on where you live, you may have rights regarding your personal data under applicable law (including GDPR, CCPA, or similar legislation). Because the only personal data we hold about most users is a waitlist email address, exercising most of these rights is straightforward:</p>
+    <ul>
+      <li><strong>Access.</strong> You can request confirmation of whether we hold your email address.</li>
+      <li><strong>Deletion.</strong> You can request that we delete your email address at any time. We will process deletion requests within 30 days.</li>
+      <li><strong>Correction.</strong> You can ask us to correct an inaccurate email address.</li>
+      <li><strong>Portability.</strong> You can request a copy of any data we hold about you.</li>
+      <li><strong>Objection.</strong> You can opt out of our waitlist emails at any time.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us using the details in the Contact section below. We will respond within 30 days.</p>
+    <p>All data generated by your use of the Mosaic app — recordings, transcriptions, categories └ is stored exclusively on your device and under your control. You can delete it at any time within the app or by deleting the app from your device.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 8. Data security -->
+  <div class="doc-section">
+    <div class="doc-section-num">Section 08</div>
+    <h2>Data Security</h2>
+    <p>App data is protected by iOS's standard sandboxing and data protection mechanisms. Notes stored on-device are encrypted using Apple's data protection APIs tied to your device passcode. We do not have access to this data and cannot decrypt it.</p>
+    <p>For waitlist emails, we use industry-standard security practices including encrypted connections (TLS) and access controls to protect the data held by our email service provider.</p>
+    <p>No method of data storage or transmission is 100% secure. While we take reasonable precautions, we cannot guarantee absolute security. In the unlikely event of a data breach affecting waitlist emails, we will notify affected users as required by applicable law.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 9. Changes -->
+  <div class="doc-section">
+    <div class="doc-section-num">Section 09</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last updated" date at the top of this page and, where appropriate, notify waitlist members by email.</p>
+    <p>Your continued use of Mosaic after any changes constitutes acceptance of the updated policy. We encourage you to review this page periodically. Previous versions of this policy are available upon request.</p>
+  </div>
+  <hr class="doc-divider" />
+
+  <!-- 10. Contact -->
+  <div class="doc-section">
+    <div class="doc-section-num">Section 10</div>
+    <h2>Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, please reach out to us. We take privacy seriously and will respond promptly.</p>
+    <div class="contact-card">
+      <div class="contact-icon">✈️</div>
+      <div class="contact-text">
+        <strong>Mosaic Privacy Team</strong>
+        <p>Email: <a href="mailto:privacy@mosaic-app.com">privacy@mosaic-app.com</a><br />
+        We aim to respond to all privacy inquiries within 5 business days.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.page-wrap -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-logo-icon"><img src="M2.webp" alt="Mosaic" /></div>
+    <strong style="color:var(--txtS);">Mosaic</strong>
+  </div>
+  <p>© 2026 Mosaic. All rights reserved. &nbsp;·&nbsp;
+    <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
+    <a href="index.html">Home</a>
+  </p>
+</footer>
+
+</body>
+</html>
